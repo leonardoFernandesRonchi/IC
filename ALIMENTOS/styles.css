@@ -1,0 +1,70 @@
+*, body {
+    background-color: #111714;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+img {
+    width: 150px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 13px; 
+    letter-spacing: 1px;
+    gap: 3px;
+}   
+p {
+    color: #99B1A2;
+}
+
+.divSendImage {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 2rem;
+    text-align: center;
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.upload {
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 600px;  
+  min-height: 300px; 
+  border: 2px dashed;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #1A241F;
+  padding: 2rem;      
+}
+.icon, .pUpload, h3{
+    background-color: #1A241F
+}
+.uploadIconDiv , i{
+    margin: 0 auto;
+    background-color: #29382F;
+    width: 30%;
+    border-radius: 50%;
+}
+.uploadIcon {
+   font-size: 370%;
+   height: 500px;
+   color: #38E07B;
+
+}
+.submitBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 65%;
+}
