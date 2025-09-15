@@ -33,20 +33,53 @@
 <h2 class="mt-5 d-flex justify-content-center">Analise imagens com I.A</h2>
 <div class="divSendImage">
   <p class="fs-6">
-    Envie suas imagens e deixe que com que um poderoso algoritmo de visão computacional lhe forneça uma análise detalhada de dados em segundos
+    Envie suas imagens e deixe que um poderoso algoritmo de visão computacional lhe forneça uma análise detalhada de dados em segundos
   </p>
 </div>
 
 <div class="upload d-flex justify-content-center">
-  <div class="icon">
+  <div class="icon text-center">
     <div class="uploadIconDiv">
       <i class="uploadIcon bi bi-cloud-arrow-up"></i>
     </div>
-    <h3>Arraste suas imagens aqui</h3>
-    <p class="pUpload">Ou se preferir...</p>
-    <button type="button" class="submitBtn btn btn-success">Pesquisar Arquivos</button>
+        <div class="mt-3">
+    <h3>Faça upload de suas imagens!</h3>
+        </div>
+
+
+    <div class="mt-4">
+    <input type="file" id="fileInput" accept="image/*" hidden>
+    </div>
+
+    <button type="button" class="submitBtn btn btn-success" onclick="document.getElementById('fileInput').click()">
+      Pesquisar Arquivos
+    </button>
+
+    <!-- Preview da imagem -->
+    <div id="preview" class="mt-3"></div>
   </div>
 </div>
+
+<script>
+  const fileInput = document.getElementById('fileInput');
+  const preview = document.getElementById('preview');
+
+  fileInput.addEventListener('change', (event) => {
+    preview.innerHTML = ""; 
+    const file = event.target.files[0];
+    if (file) {
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(file);
+      img.classList.add('img-fluid', 'rounded', 'mt-2');
+      img.style.maxHeight = "300px";
+      preview.appendChild(img);
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
